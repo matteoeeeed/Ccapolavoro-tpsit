@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            zoom: 500%;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        button {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+        width: 20%;
+        height: 20%;
+        font-size: 16px;
+        background-color: #4CAF50;   
+        color: white;
+        border:1px solid green ;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        line-height: 1.2; 
+        overflow: hidden; 
+        display: inline-block;
+        transition: all 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.3s;
+        }
+
+        .button:hover::before {
+        left: 100%;
+        }
+
+        h1 {
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 11px;
+            z-index: 1; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .button2 {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+            width: 20%;
+            height: 20%;
+            font-size: 14px;
+            border:1px solid rgb(255, 136, 0) ;
+            background-color: #eebb12;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            line-height: 1.2; 
+            overflow: hidden;
+        }
+
+        .button2:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .button2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.3s;
+        }
+
+        .button2:hover::before {
+        left: 100%;
+        }
+
+
+        .button3 {
+            position: absolute;
+            top: 80%;
+            left: 80%;
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+            width: 20%;
+            height: 20%;
+            font-size: 14px;
+            background-color: blue;
+            color: white;
+            border:1px solid rgb(3, 3, 122) ;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            line-height: 1.2;
+            overflow: hidden; 
+        }
+
+        .button3:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .button3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.3s;
+        }
+
+        .button3:hover::before {
+        left: 100%;
+        }
+
+
+    </style>
+    <script src="win.js"></script>
+</head>
+<body onload="startGame()">
+  <button class="button"><a href="livelli.html" style="color: white; text-decoration: none;">Torna al mondo</a></button>
+</body>
+</html>

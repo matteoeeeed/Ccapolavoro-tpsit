@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+ 
+ body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        html {
+            zoom: 500%;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        h1 {
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            z-index: 1; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: transform 2.0s ease-in-out;
+            animation: enlarge 1s ease-in-out infinite;
+        }
+
+        @keyframes enlarge {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+ 
+        button {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+        width: 20%;
+        height: 20%;
+        font-size: 16px;
+        background-color: #006eff;   
+        color: white;
+        border:1px solid rgb(0, 4, 252);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        line-height: 1.2; 
+        overflow: hidden; 
+        display: inline-block;
+        transition: all 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.3s;
+        }
+
+        .button:hover::before {
+        left: 100%;
+        }
+
+
+        .button2 {
+            position: absolute;
+            top: 80%;
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+            width: 20%;
+            height: 20%;
+            font-size: 14px;
+            background-color: #ee2c12;
+            color: white;
+            border: #9b1c0b solid 1px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.3s;
+        }
+
+        .button2:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .button2:hover::before {
+        left: 100%;
+        }
+
+    </style>
+    <script src="livelli3.js"></script>
+</head>
+<body onload="startGame()">
+  <h1>MONDO 3</h1>
+  <button class="button" style="left: 14%;top: 30%;"><a href="inizio1dd.html" style="color: white; text-decoration: none;">LIVELLO 17</a></button>
+  <button class="button" style="left: 38%;top: 30%;"><a href="inizio2dd.html" style="color: white; text-decoration: none;">LIVELLO 18</a></button>
+  <button class="button" style="left: 64%;top: 30%;"><a href="inizio3dd.html" style="color: white; text-decoration: none;">LIVELLO 19</a></button>
+  <button class="button" style="left: 88%;top: 30%;"><a href="inizio4dd.html" style="color: white; text-decoration: none;">LIVELLO 20</a></button>
+  <button class="button" style="left: 14%;top: 55%;"><a href="inizio5dd.html" style="color: white; text-decoration: none;">LIVELLO 21</a></button>
+  <button class="button" style="left: 38%;top: 55%;"><a href="inizio6dd.html" style="color: white; text-decoration: none;">LIVELLO 22</a></button>
+  <button class="button" style="left: 64%;top: 55%;"><a href="inizio7dd.html" style="color: white; text-decoration: none;">LIVELLO 23</a></button>
+  <button class="button2" style="left: 88%;top: 55%;"><a href="inizio8dd.html" style="color: white; text-decoration: none;">LIVELLO 24</a></button>
+  <button class="button2" style="left: 64%;top: 87%; background-color: #f3a71b;border:1px solid rgb(252, 101, 0);"><a href="livelli2.html" style="color: white; text-decoration: none;">MONDO 2</a></button>
+  <button class="button2" style="left: 88%;top: 87%; background-color: rgb(58, 170, 6);border:1px solid green; ;"><a href="livelli4.html" style="color: white; text-decoration: none;">MONDO 4</a></button>
+  <button class="button2" style="left: 14%;top: 87%; background-color: rgb(0, 89, 255);border: #0315b3 solid 1px;"><a href="titolo.html" style="color: white; text-decoration: none;">MENU</a></button>
+</body>
+</html>

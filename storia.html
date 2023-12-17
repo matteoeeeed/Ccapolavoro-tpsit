@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+ 
+        body {
+            margin: 0;
+            overflow: hidden;
+            zoom: 175%;
+            background-color: black;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        h1 {
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            z-index: 1; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: transform 2.0s ease-in-out;
+            animation: enlarge 1s ease-in-out infinite;
+        }
+
+        h2 {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        z-index: 1;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 20px;
+        }
+
+        .center-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%; 
+            max-width: 1000px; 
+        }
+
+        @keyframes enlarge {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+ 
+        button {
+        position: absolute;
+        top: 94%;
+        left: 95%;
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg);
+        width: 10%;
+        height: 10%;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        line-height: 1.2; 
+        overflow: hidden; 
+         
+        }
+
+        button:hover {
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg) scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+
+    </style>
+    <script src="storia.js"></script>
+</head>
+<body onload="startGame()">
+  <h1 style="color: white;">STORIA</h1>
+<div class="center-container">
+    <h2>Nel regno dei funghi c'era un posto tranquillo dove i Toad nel mondo giocavano, ed c'era felicità nel vivere in pace tra le cose fastidiose.Ad un certo punto, arriva una maschera hacker che cade nella pianura. 
+        I Toad vanno a vedere di che cosa si tratta dopo un po' di tempo. Quella maschera fa una trasformazione che si era esplosa e appare una specie di omino non normale, vestito con una tuta da combattimento con la scritta 
+        "Java" e altro nei pantaloni hack, cintura, maschera hacker. I Toad non capivano chi fosse questo. Java risponde: "Io distruggerò questo regno dei funghi perché devo diventare il padrone dell'universo. Io sono Java, 
+        il dio dell'informatica e dell'hacking. Sono immortale, non potete farmi niente." Così Java distrusse il regno dei funghi e uccise migliaia di Toad. Java aveva come potere il caos hack, quella gemma della leggenda gli 
+        permetteva di avere tanti poteri limitati per poter spazzare via tutto. I Toad, dopo essere fuggiti da quel dio dell'informatica della distruzione, chiesero a Super Mario di sconfiggere quel nemico. Mario si spaventò e 
+         iniziò a correre per saltare sopra un blocco e prendere il potenziamento: la cappa più potente del mondo che aiuta a avere il mantello dell'infinito per sconffigere Java e salvare il regno dei funghi! </h2>
+         <button class="button"><a href="livelli.html" style="color: white; text-decoration: none;">SALTA</a></button>
+</div>
+</body>
+</html>
